@@ -1,0 +1,25 @@
+{
+  "Problem_Type": "Static",
+  "CNN_Dim": [64, 64, 64, 1],
+  "Batch_Size": 128,
+  "Input": {
+    "rmr": "MinMax",
+    "u3o8_pct": "MinMax",
+    "cy_pct": "MinMax",
+    "vwc": "MinMax",
+    "as_pct": "MinMax",
+    "backfill_density": "MinMax",
+    "pilot_hole_distance": "MinMax",
+    "nozzle_angle": "MinMax",
+    "jetting_time": "MinMax",
+    "jetting_pumps": "MinMax",
+    "rotation_speed": "MinMax"
+  },
+  "Output": {
+    "consumed_cavity": "MinMax"
+  },
+  "Dataset_Split": [0.6, 0.2, 0.2],
+  "Raw_Data_Name": "Field_Static_V1",
+  "Dataset_Name": "Field_Static_V1 (Blocks Consumed)",
+  "Remove_Regions": true
+}

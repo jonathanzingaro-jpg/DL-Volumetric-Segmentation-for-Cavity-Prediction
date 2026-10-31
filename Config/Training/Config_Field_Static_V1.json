@@ -1,0 +1,41 @@
+{
+  "Model_Config": {
+    "In_Channels":   11,
+    "Out_Channels":  1,
+    "Model_Type":    "UNet3D",
+    "Loss_Type":     "Soft_IoU+BCE",
+    "Task_Type":     "Segmentation",
+    "Problem_Type":  "Static",
+    "N_Epoch":       225,
+    "N_Models":      10,
+    "Model_Name":    "Blocks Consumed Model - Field_Static_V1",
+    "Temp_Scaling":  true
+  },
+  "Data_Config": {
+    "Dataset_Name":         "Field_Static_V1 (Blocks Consumed)",
+    "Noise_Toggle":         true,
+    "Noise_Level":          0.20,
+    "Augmentation_Toggle":  true,
+    "Batch_Size":           32
+  },
+  "Optimizer_Config": {
+    "Optimizer_Type": "Adam",
+    "Learning_Rate":  1e-3,
+    "Weight_Decay":   1e-4,
+    "Betas":          [0.9, 0.999],
+    "Eps":            1e-8
+  },
+  "Scheduler_Config": {
+    "Scheduler_Type": "CosineAnnealingWarmRestarts",
+    "T_0":             75,
+    "T_mult":          2
+  },
+  "Toggle_Config": {
+    "Post_Process_Toggle":      true,
+    "Visualize_Results":        true,
+    "Visualize_Test_Case":      true,
+    "SHAP_Toggle":              true,
+    "Multi_GPU":                true,
+    "Skip_Training":            false
+  }
+}
